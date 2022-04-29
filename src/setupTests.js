@@ -29,4 +29,8 @@ const server = setupServer(
     return res(ctx.json(data))
   }
   ),
-)
+);
+
+beforeAll(() => server.listen());
+afterEach(() => server.resetHandlers());
+afterAll(() => server.close());
