@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { rickAndMortyFetch } from "../services/fetch-utils"
+import styles from '../App.css';
 
 export default function Compendium() {
   const [characters, setCharacters] = useState([]);
@@ -44,10 +45,10 @@ export default function Compendium() {
             <option value='Dead'>Dead</option>
             <option value='unknown'>Unknown</option>
           </select>
-        </label><ul>
+          </label><ul className={styles["character-box"]}>
             {characterList.map((character) => {
               return (
-                <li>
+                <li className={styles["rick"]} key={character.name}>
                   <img src={character.img} />
                   <h3>{character.name}</h3>
                   <p>{character.status}</p>

@@ -1,0 +1,25 @@
+
+
+.rick {
+  margin: 10px;
+  border: solid rgb(5, 227, 49) 3px;
+  border-radius: 5px;
+  background-color: rgb(55, 225, 13);
+  opacity: 0.8;
+}
+.character-box {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  text-align: center;
+
+}
