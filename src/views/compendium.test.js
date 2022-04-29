@@ -1,6 +1,15 @@
 import { render, screen, waitForElementToBeRemoved } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
+import { rest } from "msw";
+import { setupServer } from "msw/node";
 import Compendium from "./Compendium";
+
+const server = setupServer(
+  rest.get('https://rickandmortyapi.com/api/character', (req, res, ctx) => {
+    return res(ctx.json({ name: 'Rick Sanchez' }))
+  }
+  ),
+)
 
 describe('header', () => {
   test('Should render the header, character, and loading', async () => {
