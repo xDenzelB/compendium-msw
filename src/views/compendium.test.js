@@ -15,7 +15,7 @@ describe('header', () => {
     expect(header).toBeInTheDocument();
     const characterList = await screen.findAllByRole('listitem');
     expect(characterList.length).toEqual(3);
-    expect(characterList[0].outerHTML).toContain('<li><img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"><h3>Rick Sanchez</h3><p>Alive</p></li>');
+    expect(characterList[0].outerHTML).toContain('<li class=\"rick\"><img src=\"https://rickandmortyapi.com/api/character/avatar/1.jpeg\"><h3>Rick Sanchez</h3><p>Alive</p></li>');
 
   })
 
